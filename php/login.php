@@ -30,8 +30,7 @@ if ($Password == "") {
 }
 
 // Check the database to login
-$result = $conn->prepare("SELECT count(*) FROM user WHERE name='$Name' AND password='$Email'");
-
+$result = $conn->prepare("SELECT count(*) FROM user WHERE name='$Name' AND password='$Password'");
 $result->execute(); 
 $number_of_rows = $result->fetchColumn();
 
@@ -40,6 +39,9 @@ if ($number_of_rows == 0) {
   $message = "Loin Fail...!";
   print_r(json_encode(['status'=>false,'msg'=>$message]));exit;
 }else {
+  //
+  //  create session ?????????
+  //
   $message = "Login Successfull...!";
   print_r(json_encode(['status'=>true,'msg'=>$message]));exit;
 }

@@ -3,8 +3,6 @@ $(document).on('submit','#login_form',function(event) {
     var action = $(this).attr('action');
     var method = $(this).attr('method');
     var form = $(this);
-
-
     
     event.preventDefault();
 
