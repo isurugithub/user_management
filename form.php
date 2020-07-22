@@ -19,7 +19,7 @@
         <div class="card card-signin my-5">
           <div class="card-body">
             <h5 class="card-title text-center">Register Form</h5>
-            <form class="form-signin" id="register_form" action="php/index.php" method="GET">
+            <form class="form-signin" id="register_form" action="php/form_controller.php" method="GET">
 
               <div class="form-label-group">
                 <input type="text" name="name" id="inputName" class="form-control" placeholder="Name" autofocus>
@@ -42,8 +42,8 @@
               </div>
 
               <div class="form-label-group">
-                <input type="password" name="re_password" id="input_re_Password" class="form-control" placeholder="Conferm Password" >
-                <label for="inputPassword">Password</label>
+                <input type="password" name="re_password" id="input_re_Password" class="form-control" placeholder="Confirm Password" >
+                <label for="input_re_Password">Confirm Password</label>
               </div>
 
               <div class="form-label-group">
