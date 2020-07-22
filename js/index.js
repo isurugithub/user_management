@@ -13,13 +13,14 @@ $(document).on('submit','#login_form',function(event) {
             dataType: "JSON",
             success: function (data) {
                 var status = data.status;
-                if (status == false) {
-                    $("#alert").html('<div class="alert alert-danger" role="alert">'+data.msg+'</div>')
-                }else{
+                if (status == true) {
                     $("#alert").html('<div class="alert alert-success" role="alert">'+data.msg+'</div>')
+                    setTimeout(() => {
+                        location.reload();
+                    }, 1000);
+                }else{
+                    $("#alert").html('<div class="alert alert-danger" role="alert">'+data.msg+'</div>')
                 }
-                console.log('Submission was successful.');
-                console.log(data);
             },
             error: function (data) {
                 console.log('An error occurred.');

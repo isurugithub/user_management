@@ -1,3 +1,11 @@
+<?php
+session_start(); // Includes Login Script
+
+if(isset($_SESSION['login_user'])){
+header("location: welcome.php");
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,7 +32,7 @@
             <div id="alert">
             </div>
 
-            <form action="php/login.php" method="post" id="login_form" class="form-signin">
+            <form action="php/login_controller.php" method="post" id="login_form" class="form-signin">
 
               <div class="form-label-group">
                 <input type="text" name="name" id="inputName" class="form-control" placeholder="Name"  autofocus>
@@ -41,10 +49,10 @@
                 <label class="custom-control-label" for="customCheck1">Remember password</label>
               </div>
 
-              <button class="btn btn-lg btn-primary btn-block text-uppercase" id="btnlogin" type="submit" >Login</button>
+              <button class="btn btn-lg btn-primary btn-block text-uppercase" name="submit" type="submit" >Login</button>
 
               <hr class="my-4">
-              <p class="message">Not registered? <a href="form.html">Create an account</a></p>
+              <p class="message">Not registered? <a href="form.php">Create an account</a></p>
 
             </form>
           </div>
