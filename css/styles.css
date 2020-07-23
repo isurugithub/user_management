@@ -2,6 +2,20 @@
     --input-padding-x: 1.5rem;
     --input-padding-y: .75rem;
   }
+
+  .welcome{
+    font-size: 100px;
+    text-align: center;
+  }
+  .logout {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    text-align: center;
+    line-height: 30px;
+  }
   
   body {
     background: #007bff;

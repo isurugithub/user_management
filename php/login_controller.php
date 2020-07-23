@@ -17,23 +17,22 @@ try {
   echo "Connection failed: " . $e->getMessage();exit;
 }
 
-
-  // Define name and password
-  $Name = $_POST['name'];
+  // Define email and password
+  $Email = $_POST['email'];
   $Password = $_POST['password'];
 
-  if ($Name == "") {
-    $message = "Pleace enter your name...!";
+  if (empty($Email)) {
+    $message = "Pleace enter your email...!";
     print_r(json_encode(['status'=>false,'msg'=>$message]));exit;
   }
-  elseif ($Password == "") {
+  elseif (empty($Password)) {
     $message = "Pleace enter your password...!";
     print_r(json_encode(['status'=>false,'msg'=>$message]));exit;
   }
   else {
   
     // Check the database to login
-    $result = $conn->prepare("SELECT count(*) FROM user WHERE name='$Name' AND password='$Password'");
+    $result = $conn->prepare("SELECT count(*) FROM user WHERE email='$Email' AND password='$Password'");
     $result->execute(); 
     $number_of_rows = $result->fetchColumn();
  
@@ -43,7 +42,7 @@ try {
       print_r(json_encode(['status'=>false,'msg'=>$message]));exit;
     }else {
       $message = "Login Successfull...!";
-      $result = $conn->prepare("SELECT id FROM user WHERE name='$Name' AND password='$Password'");
+      $result = $conn->prepare("SELECT id FROM user WHERE email='$Email' AND password='$Password'");
       $result->execute(); 
       $row = $result->fetchColumn();
       $_SESSION['login_user'] = $row['id'];
