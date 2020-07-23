@@ -13,12 +13,12 @@ header("location: welcome.php");
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     
-    <link rel="stylesheet" href="css/styles.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
     <script src="js/index.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">  
 
 </head>
 <body>
@@ -32,11 +32,11 @@ header("location: welcome.php");
             <div id="alert">
             </div>
 
-            <form action="php/login_controller.php" method="post" id="login_form" class="form-signin">
+             <form  method="post" id="login_form" class="form-signin">
 
               <div class="form-label-group">
-                <input type="text" name="name" id="inputName" class="form-control" placeholder="Name"  autofocus>
-                <label for="inputName">Name</label>
+                <input type="text" name="email" id="inputEmail" class="form-control" placeholder="Email" require autofocus>
+                <label for="inputEmail">Email</label>
               </div>
 
               <div class="form-label-group">
