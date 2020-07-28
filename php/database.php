@@ -1,10 +1,11 @@
 <?php
-
+// Define the require variable
 $servername = "localhost";
 $username = "root";
 $password = "root";
 $dbname = "user_management";
 
+// Database connect function
 try {
     
     $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
