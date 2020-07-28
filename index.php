@@ -32,7 +32,7 @@ header("location: welcome.php");
             <div id="alert">
             </div>
 
-             <form  method="post" id="login_form" class="form-signin">
+             <form action="php/login_controller.php" method="post" id="login_form" class="form-signin">
 
               <div class="form-label-group">
                 <input type="text" name="email" id="inputEmail" class="form-control" placeholder="Email" require autofocus>

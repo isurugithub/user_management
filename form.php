@@ -41,13 +41,13 @@
                 <label for="inputPassword">Password</label>
               </div>
 
-              <div class="form-label-group">
+              <!-- <div class="form-label-group">
                 <input type="password" name="re_password" id="input_re_Password" class="form-control" placeholder="Confirm Password" >
                 <label for="input_re_Password">Confirm Password</label>
-              </div>
+              </div> -->
 
               <div class="form-label-group">
-                <textarea class="form-control" name="address" id="inputAddres" cols="30" rows="3" placeholder="   Address" ></textarea>
+                <textarea class="form-control" name="address" id="inputAddress" cols="30" rows="3" placeholder="   Address" ></textarea>
               </div>
 
               <hr class="my-4">
