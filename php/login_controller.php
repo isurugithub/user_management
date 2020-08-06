@@ -29,8 +29,7 @@ try {
     $message = "Pleace enter your password...!";
     print_r(json_encode(['status'=>false,'msg'=>$message]));exit;
   }
-  else {
-  
+  else {  
     // Check the database to login
     $result = $conn->prepare("SELECT count(*) FROM user WHERE email='$Email' AND password='$Password'");
     $result->execute(); 
@@ -46,7 +45,8 @@ try {
       $result->execute(); 
       $row = $result->fetchColumn();
       $_SESSION['login_user'] = $row['id'];
-      print_r(json_encode(['status'=>true,'msg'=>$message]));exit;  
+      print_r(json_encode(['status'=>true,'msg'=>$message]));exit;
     }
   }
+  $conn = null;
 ?>

@@ -2,9 +2,16 @@
     --input-padding-x: 1.5rem;
     --input-padding-y: .75rem;
   }
-
+  .addbtn{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 30%;
+  }
   .welcome{
-    font-size: 100px;
+    margin-bottom: 2rem;
+    font-weight: 300;
+    font-size: 5rem;
     text-align: center;
   }
   .logout {

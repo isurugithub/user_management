@@ -4,7 +4,8 @@ $servername = "localhost";
 $username = "root";
 $password = "root";
 $dbname = "user_management";
-
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 // Database connect function
 try {
     
