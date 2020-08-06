@@ -71,6 +71,7 @@ if ($Password != $ConfirmPassword) {
   print_r(json_encode(['status'=>false,'msg'=>$message]));exit;
 }
 
+// DataBase Operations.
 if ($conn != null) {
 
   $result = $conn->prepare("SELECT count(*) FROM user WHERE email='$Email'");
