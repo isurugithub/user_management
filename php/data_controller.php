@@ -1,6 +1,11 @@
 <?php
+session_start(); // Includes Login Script
+
 require('database.php');
 
+if(!isset($_SESSION['login_user'])){
+header("location: index.php");
+}
 $request = "load_view";
 if(isset($_POST['request'])){
    $request = $_POST['request'];

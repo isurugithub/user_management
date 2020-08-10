@@ -1,3 +1,10 @@
+<?php
+session_start(); // Includes Login Script
+
+if(!isset($_SESSION['login_user'])){
+header("location: index.php");
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
